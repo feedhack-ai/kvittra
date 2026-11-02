@@ -144,6 +144,12 @@ export function invoiceStatus(invoice: Pick<Invoice, "paidDate" | "dueDate">, to
   return invoice.dueDate < today ? "overdue" : "unpaid";
 }
 
+// Whole days past the due date for an unpaid invoice; 0 when paid or not yet due.
+export function daysOverdue(invoice: Pick<Invoice, "paidDate" | "dueDate">, today = TODAY) {
+  if (invoiceStatus(invoice, today) !== "overdue") return 0;
+  return Math.round((Date.parse(`${today}T00:00:00Z`) - Date.parse(`${invoice.dueDate}T00:00:00Z`)) / 86_400_000);
+}
+
 const CURRENCIES = ["SEK", "EUR", "USD"] as const;
 const PAID = new Set([1002, 1004, 1007, 1013]);
 const REFS = ["Karin Svensson", "Erik Lund", "Sara Holm", "Johan Berg", "Emma Nyström"];

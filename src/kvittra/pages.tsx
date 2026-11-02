@@ -18,7 +18,7 @@ import {
   TrashIcon,
 } from "@radix-ui/react-icons";
 import { cn } from "../lib/cn";
-import { MONTHS, STREAMS, formatAmount, invoiceStatus, invoiceTotals, ocrFor, type InvoiceStatus } from "./data";
+import { MONTHS, STREAMS, daysOverdue, formatAmount, invoiceStatus, invoiceTotals, ocrFor, type InvoiceStatus } from "./data";
 import { useKvittra } from "./store";
 import { CreateButton, FooterSelect, GetPaidButton, ListPage, PillButton } from "./ui";
 
@@ -66,24 +66,26 @@ export function InvoicesPage() {
         { label: "OCR", width: "6%" },
         { label: "Type", width: "4%" },
         { label: "Cust no", width: "6%" },
-        { label: "Name", width: "15%" },
+        { label: "Name", width: "11%" },
         { label: "Inv date", width: "8%" },
         { label: "Del date", width: "8%" },
         { label: "Total", width: "8%", align: "right" },
         { label: "Balance", width: "8%", align: "right" },
         { label: "Currency", width: "6.5%" },
         { label: "Due date", width: "8%" },
+        { label: "Days overdue", width: "7%", align: "right" },
         { label: "Paid", width: "8%" },
       ]}
       rows={invoices.map((inv) => {
         const { total } = invoiceTotals(inv);
         const status = invoiceStatus(inv);
         const balance = status === "paid" ? 0 : total;
+        const overdue = daysOverdue(inv);
         const customerName = customers.find((c) => c.no === inv.customerNo)?.name ?? "";
         return {
           key: inv.no,
           tint: status === "paid" ? "green" : undefined,
-          muted: [1, 2, 3, 5, 6, 9, 10, 11],
+          muted: [1, 2, 3, 5, 6, 9, 10, 11, 12],
           attrs: {
             "data-invoice": inv.no,
             "data-customer": inv.customerNo ?? "",
@@ -94,6 +96,7 @@ export function InvoicesPage() {
             "data-balance": balance,
             "data-currency": inv.currency,
             "data-status": status,
+            "data-days-overdue": overdue,
           },
           cells: [
             inv.no,
@@ -107,6 +110,7 @@ export function InvoicesPage() {
             formatAmount(balance),
             inv.currency,
             inv.dueDate,
+            overdue > 0 ? <span className={cn(overdue > 30 && "font-bold text-red-600")}>{overdue}</span> : "",
             inv.paidDate ?? "",
           ],
         };
