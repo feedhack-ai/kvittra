@@ -1,0 +1,1 @@
+{"root":["./src/main.tsx","./src/kvittra/articleform.tsx","./src/kvittra/customerform.tsx","./src/kvittra/invoiceform.tsx","./src/kvittra/kvittraapp.tsx","./src/kvittra/data.ts","./src/kvittra/formui.tsx","./src/kvittra/pages.tsx","./src/kvittra/store.tsx","./src/kvittra/ui.tsx","./src/lib/cn.ts","./vite.config.ts"],"version":"5.9.3"}
