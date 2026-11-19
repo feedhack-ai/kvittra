@@ -155,7 +155,7 @@ function OverdueSummary({ rows }: { rows: Row[] }) {
   return (
     <div
       id="invoices-overdue-summary"
-      className="flex shrink-0 flex-wrap items-center gap-x-6 gap-y-1 rounded-lg border border-[#F7C6C6] bg-[#FDF2F2] px-4 py-2.5 text-xs text-gray-700"
+      className="flex shrink-0 flex-wrap items-center gap-x-6 gap-y-1 rounded-lg border border-[#F2A5A5] border-l-4 border-l-[#DC2626] bg-[#FDE2E2] px-4 py-2.5 text-xs text-gray-800"
     >
       <span className="flex flex-wrap items-baseline gap-x-2">
         Total outstanding
