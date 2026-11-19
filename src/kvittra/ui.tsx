@@ -164,6 +164,7 @@ export function ListPage({
   rowIcons = [],
   onRowClick,
   footer,
+  summary,
 }: {
   // Names the list's parts for anything that reads the page: <id>-filters, <id>-table.
   id?: string;
@@ -181,6 +182,8 @@ export function ListPage({
   rowIcons?: Icon[];
   onRowClick?: (key: Row["key"]) => void;
   footer: (selected: number) => { left: ReactNode; right: ReactNode };
+  // Optional bar above the table for the chosen filter, given the rows it shows.
+  summary?: (shown: Row[], filter: string) => ReactNode;
 }) {
   const [filter, setFilter] = useState(defaultFilter);
   const shown = matches ? rows.filter((row) => matches(row, filter)) : rows;
@@ -236,8 +239,9 @@ export function ListPage({
         <Pagination total={matches ? shown.length : total} />
       </div>
 
-      <div className="min-h-0 flex-1 px-6 pt-3 pb-4">
-        <div className="h-full overflow-hidden rounded-lg border border-gray-200 bg-white">
+      <div className="flex min-h-0 flex-1 flex-col gap-3 px-6 pt-3 pb-4">
+        {summary?.(shown, filter)}
+        <div className="min-h-0 flex-1 overflow-hidden rounded-lg border border-gray-200 bg-white">
           <table id={id && `${id}-table`} className="w-full table-fixed border-separate border-spacing-0 text-xs">
             <colgroup>
               <col className="w-10" />

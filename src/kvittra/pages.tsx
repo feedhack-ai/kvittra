@@ -20,7 +20,7 @@ import {
 import { cn } from "../lib/cn";
 import { MONTHS, STREAMS, formatAmount, invoiceStatus, invoiceTotals, ocrFor, type InvoiceStatus } from "./data";
 import { useKvittra } from "./store";
-import { CreateButton, FooterSelect, GetPaidButton, ListPage, PillButton } from "./ui";
+import { CreateButton, FooterSelect, GetPaidButton, ListPage, PillButton, type Row } from "./ui";
 
 // What each filter tab of the invoice list shows. The tabs not listed here
 // (Not booked, Voided, …) are empty in this mock.
@@ -113,6 +113,7 @@ export function InvoicesPage() {
       })}
       onRowClick={(no) => navigate("invoices", { mode: "edit", no: Number(no) })}
       rowIcons={[PersonIcon, EnvelopeClosedIcon, CopyIcon]}
+      summary={(shown, filter) => (filter === "Unpaid overdue" ? <OverdueSummary rows={shown} /> : null)}
       footer={(selected) => ({
         left: (
           <>
@@ -138,6 +139,47 @@ export function InvoicesPage() {
         ),
       })}
     />
+  );
+}
+
+// Bar above the Unpaid overdue list: what is outstanding, per currency, and
+// how many customers owe it.
+function OverdueSummary({ rows }: { rows: Row[] }) {
+  const byCurrency = new Map<string, number>();
+  const customers = new Set<string>();
+  for (const row of rows) {
+    const currency = String(row.attrs?.["data-currency"] ?? "");
+    byCurrency.set(currency, (byCurrency.get(currency) ?? 0) + Number(row.attrs?.["data-balance"] ?? 0));
+    customers.add(String(row.attrs?.["data-customer"] ?? ""));
+  }
+  return (
+    <div
+      id="invoices-overdue-summary"
+      className="flex shrink-0 flex-wrap items-center gap-x-6 gap-y-1 rounded-lg border border-[#F2A5A5] border-l-4 border-l-[#DC2626] bg-[#FDE2E2] px-4 py-2.5 text-xs text-gray-800"
+    >
+      <span className="flex flex-wrap items-baseline gap-x-2">
+        Total outstanding
+        {rows.length === 0 ? (
+          <span className="text-sm font-bold text-gray-900 tabular-nums">0,00</span>
+        ) : (
+          [...byCurrency].map(([currency, amount], i) => (
+            <span key={currency} className="flex items-baseline gap-x-2">
+              {i > 0 && <span className="text-gray-400">·</span>}
+              <span className="text-sm font-bold text-gray-900 tabular-nums">{formatAmount(amount)}</span>
+              {currency}
+            </span>
+          ))
+        )}
+      </span>
+      <span>
+        across <span className="text-sm font-bold text-gray-900">{customers.size}</span>{" "}
+        {customers.size === 1 ? "customer" : "customers"}
+        <span className="text-gray-500">
+          {" "}
+          ({rows.length} {rows.length === 1 ? "invoice" : "invoices"})
+        </span>
+      </span>
+    </div>
   );
 }
 
