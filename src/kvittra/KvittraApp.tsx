@@ -40,6 +40,25 @@ const FOOTER_NAV: NavItem[] = [
 
 const COMPANY = "Söderberg Konsult AB";
 
+function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    <div id="counter" className="flex items-center gap-2 border-r border-gray-300 px-3 text-xs text-gray-700">
+      <span className="min-w-4 text-right font-medium tabular-nums" aria-live="polite">
+        {count}
+      </span>
+      <button
+        type="button"
+        onClick={() => setCount((c) => c + 1)}
+        title="Increase by 1"
+        className="flex h-6 w-6 items-center justify-center rounded text-gray-500 hover:bg-black/10"
+      >
+        <PlusIcon className="h-3.5 w-3.5" />
+      </button>
+    </div>
+  );
+}
+
 function Header({ navOpen }: { navOpen: boolean }) {
   return (
     <header id="topbar" className="z-20 flex h-10 w-full shrink-0 items-stretch border-b border-gray-300 bg-white">
@@ -55,6 +74,7 @@ function Header({ navOpen }: { navOpen: boolean }) {
       <div className="flex min-w-0 flex-1 items-stretch">
       </div>
       <div className="flex shrink-0 items-stretch border-l border-gray-300">
+        <Counter />
         <div className="flex items-center px-3 text-xs font-medium text-gray-700">{COMPANY}</div>
         <div className="flex w-10 items-center justify-center border-l border-gray-300 bg-white text-gray-600">
           <ChatBubbleIcon className="h-4 w-4" />
