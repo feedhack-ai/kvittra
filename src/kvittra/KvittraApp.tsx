@@ -40,6 +40,24 @@ const FOOTER_NAV: NavItem[] = [
 
 const COMPANY = "Söderberg Konsult AB";
 
+function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    <button
+      id="counter"
+      type="button"
+      onClick={() => setCount((c) => c + 1)}
+      title="Add 1"
+      data-count={count}
+      className="flex items-center gap-1.5 border-r border-gray-300 px-3 text-xs text-gray-600 hover:bg-black/5"
+    >
+      <PlusIcon className="h-3.5 w-3.5" />
+      <span>Counter</span>
+      <span className="font-medium text-[#1D4ED8] tabular-nums">{count}</span>
+    </button>
+  );
+}
+
 function Header({ navOpen }: { navOpen: boolean }) {
   return (
     <header id="topbar" className="z-20 flex h-10 w-full shrink-0 items-stretch border-b border-gray-300 bg-white">
@@ -53,6 +71,7 @@ function Header({ navOpen }: { navOpen: boolean }) {
         {navOpen && <img src={`${import.meta.env.BASE_URL}wordmark.svg`} alt="kvittra" width={120} height={32} className="h-5 w-auto" />}
       </div>
       <div className="flex min-w-0 flex-1 items-stretch">
+        <Counter />
       </div>
       <div className="flex shrink-0 items-stretch border-l border-gray-300">
         <div className="flex items-center px-3 text-xs font-medium text-gray-700">{COMPANY}</div>
