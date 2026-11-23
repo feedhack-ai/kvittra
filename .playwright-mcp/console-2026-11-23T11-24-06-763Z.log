@@ -1,0 +1,20 @@
+[     953ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=5ae63cbe:22164
+[   11336ms] Error: useKvittra must be used inside KvittraStoreProvider
+    at useKvittra (http://localhost:5173/src/kvittra/store.tsx:51:21)
+    at Shell (http://localhost:5173/src/kvittra/KvittraApp.tsx:334:21)
+    at Object.react_stack_bottom_frame (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=5ae63cbe:20259:20)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=5ae63cbe:5918:24)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=5ae63cbe:7763:21)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=5ae63cbe:8843:20)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=5ae63cbe:1133:72)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=5ae63cbe:13598:98)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=5ae63cbe:13461:43)
+    at renderRootSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=5ae63cbe:13445:13)
+[   11333ms] [WARNING] %s
+
+%s
+ An error occurred in the <Shell> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=5ae63cbe:7240
+[   11580ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=5ae63cbe:22164
+[   13407ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:864
+[   15865ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=371a6f59:22164
