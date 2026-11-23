@@ -286,7 +286,7 @@ export function AgentsPage() {
             <span key="n" className="flex items-center gap-2">
               Tab 1 <Pencil1Icon className="h-3 w-3 text-gray-400" />
             </span>,
-            <span key="s" className="rounded bg-[#BFDBFE] px-1.5 py-0.5 text-[10px] font-semibold text-[#1E3A8A]">
+            <span key="s" className="rounded bg-[#BBF7D0] px-1.5 py-0.5 text-[10px] font-semibold text-[#14532D]">
               Active tab
             </span>,
             0,
@@ -323,7 +323,7 @@ function KpiCard({
       <div
         className={cn(
           "mt-2 flex items-center gap-1 text-xs",
-          trend === "up" && "text-[#1D4ED8]",
+          trend === "up" && "text-[#15803D]",
           trend === "down" && "text-gray-600",
           trend === "warn" && "text-[#C2410C]",
         )}
@@ -344,7 +344,7 @@ export function OverviewPage() {
     <div className="flex h-full min-w-0 flex-1 flex-col overflow-hidden bg-[#F0F0F0]">
       <div className="flex shrink-0 items-center justify-between border-b border-gray-300 px-6 py-3">
         <h1 className="flex items-center gap-3 text-base font-bold tracking-wide text-gray-900 uppercase">
-          Overview <span className="font-mono text-sm font-semibold text-[#1D4ED8]">[Q2 2026]</span>
+          Overview <span className="font-mono text-sm font-semibold text-[#15803D]">[Q2 2026]</span>
         </h1>
         <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#4A4A4A] text-white">
           <ChevronUpIcon className="h-4 w-4" />
@@ -428,7 +428,7 @@ export function OverviewPage() {
                   </div>
                   <div className="flex justify-between text-[10px]">
                     <span className="text-gray-400">{share}%</span>
-                    <span className="font-semibold text-[#1D4ED8]">↑ {delta}</span>
+                    <span className="font-semibold text-[#15803D]">↑ {delta}</span>
                   </div>
                   <div className="mt-1 h-1.5 bg-gray-100">
                     <div
@@ -449,7 +449,7 @@ export function OverviewPage() {
                 <div className="text-sm font-bold text-gray-900">Pricing — recent changes</div>
                 <div className="text-xs text-gray-400">Price changes that affect revenue. Tracked per article.</div>
               </div>
-              <span className="flex items-center gap-1 text-xs font-semibold text-[#1D4ED8]">
+              <span className="flex items-center gap-1 text-xs font-semibold text-[#15803D]">
                 Follow up <ArrowRightIcon className="h-3 w-3" />
               </span>
             </div>
@@ -461,7 +461,7 @@ export function OverviewPage() {
                 </div>
                 <span className="flex items-center gap-3 text-xs text-gray-600 tabular-nums">
                   {formatAmount(price / 1.05)} → {formatAmount(price)}
-                  <span className="bg-[#DBEAFE] px-1.5 py-0.5 font-bold text-[#1E3A8A]">+5.0%</span>
+                  <span className="bg-[#DCFCE7] px-1.5 py-0.5 font-bold text-[#14532D]">+5.0%</span>
                 </span>
               </div>
             ))}
