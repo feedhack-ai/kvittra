@@ -213,9 +213,9 @@ export function ocrFor(no: number) {
 // Overview page: stacked monthly revenue per stream (kSEK).
 export const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"] as const;
 export const STREAMS = [
-  { name: "Consulting", color: "#1E3A8A", values: [95, 110, 80, 95, 140, 210] },
-  { name: "Development", color: "#1D4ED8", values: [60, 70, 55, 60, 85, 140] },
-  { name: "Licenses", color: "#3B82F6", values: [40, 45, 40, 40, 55, 95] },
+  { name: "Consulting", color: "#831843", values: [95, 110, 80, 95, 140, 210] },
+  { name: "Development", color: "#BE185D", values: [60, 70, 55, 60, 85, 140] },
+  { name: "Licenses", color: "#F472B6", values: [40, 45, 40, 40, 55, 95] },
   { name: "Support", color: "#D9A21B", values: [30, 35, 25, 35, 45, 65] },
 ] as const;
 
