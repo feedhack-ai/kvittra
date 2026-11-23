@@ -1,0 +1,84 @@
+[     221ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:22164
+[   20309ms] Error: useKvittra must be used inside KvittraStoreProvider
+    at useKvittra (http://localhost:5173/src/kvittra/store.tsx:51:21)
+    at Shell (http://localhost:5173/src/kvittra/KvittraApp.tsx:334:21)
+    at Object.react_stack_bottom_frame (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:20259:20)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:5918:24)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:7763:21)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:8843:20)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:1133:72)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:13598:98)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:13461:43)
+    at renderRootSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:13445:13)
+[   20308ms] [WARNING] %s
+
+%s
+ An error occurred in the <Shell> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:7240
+[   20332ms] Error: useKvittra must be used inside KvittraStoreProvider
+    at useKvittra (http://localhost:5173/src/kvittra/store.tsx:51:21)
+    at Shell (http://localhost:5173/src/kvittra/KvittraApp.tsx:334:21)
+    at Object.react_stack_bottom_frame (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:20259:20)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:5918:24)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:7763:21)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:8843:20)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:1133:72)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:13598:98)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:13461:43)
+    at renderRootSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:13445:13)
+[   20330ms] [WARNING] %s
+
+%s
+ An error occurred in the <Shell> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:7240
+[   20385ms] Error: useKvittra must be used inside KvittraStoreProvider
+    at useKvittra (http://localhost:5173/src/kvittra/store.tsx:51:21)
+    at Shell (http://localhost:5173/src/kvittra/KvittraApp.tsx:334:21)
+    at Object.react_stack_bottom_frame (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:20259:20)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:5918:24)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:7763:21)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:8843:20)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:1133:72)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:13598:98)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:13461:43)
+    at renderRootSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:13445:13)
+[   20384ms] [WARNING] %s
+
+%s
+ An error occurred in the <Shell> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:7240
+[   20505ms] Error: useKvittra must be used inside KvittraStoreProvider
+    at useKvittra (http://localhost:5173/src/kvittra/store.tsx?t=1795471333828:51:21)
+    at Shell (http://localhost:5173/src/kvittra/KvittraApp.tsx?t=1795471333813:334:21)
+    at Object.react_stack_bottom_frame (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:20259:20)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:5918:24)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:7763:21)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:8843:20)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:1133:72)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:13598:98)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:13461:43)
+    at renderRootSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:13445:13)
+[   20502ms] [WARNING] %s
+
+%s
+ An error occurred in the <Shell> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:7240
+[   20528ms] Error: useKvittra must be used inside KvittraStoreProvider
+    at useKvittra (http://localhost:5173/src/kvittra/store.tsx?t=1795471333828:51:21)
+    at Shell (http://localhost:5173/src/kvittra/KvittraApp.tsx?t=1795471333828:334:21)
+    at Object.react_stack_bottom_frame (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:20259:20)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:5918:24)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:7763:21)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:8843:20)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:1133:72)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:13598:98)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:13461:43)
+    at renderRootSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:13445:13)
+[   20527ms] [WARNING] %s
+
+%s
+ An error occurred in the <Shell> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:7240
+[   20646ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=418af64f:22164
+[   22731ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:864
+[   25347ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=274068b8:22164
