@@ -113,17 +113,17 @@ function Pagination({ total }: { total: number }) {
   const arrow = "flex h-7 w-6 items-center justify-center text-gray-400";
   return (
     <div className="flex shrink-0 items-center gap-3 whitespace-nowrap">
-      <span className="flex h-7 w-7 items-center justify-center border border-gray-300 bg-white text-gray-600">
+      <span className="flex h-7 w-7 items-center justify-center rounded-md border border-gray-300 bg-white text-gray-600">
         <HamburgerMenuIcon className="h-4 w-4" />
       </span>
       <span className="flex items-center gap-1.5 text-xs text-gray-600">
-        <span className="relative flex h-7 w-12 items-center border border-gray-300 bg-white pl-1.5">
+        <span className="relative flex h-7 w-12 items-center rounded-md border border-gray-300 bg-white pl-1.5">
           20
           <CaretDownIcon className="absolute right-1 h-3.5 w-3.5 text-gray-500" />
         </span>
         of {total}
       </span>
-      <span className="flex overflow-hidden rounded border border-gray-300 bg-white">
+      <span className="flex overflow-hidden rounded-md border border-gray-300 bg-white">
         <span className={arrow}>
           <TrackPreviousIcon className="h-3.5 w-3.5" />
         </span>
@@ -208,7 +208,7 @@ export function ListPage({
           </h1>
           <div className="relative w-72 shrink-0">
             <MagnifyingGlassIcon className="absolute top-1/2 left-2.5 h-4 w-4 -translate-y-1/2 text-gray-400" />
-            <div className="flex h-8 items-center border border-gray-300 bg-white pl-8 text-xs text-gray-400 italic">
+            <div className="flex h-8 items-center rounded-full border border-gray-300 bg-white pl-8 text-xs text-gray-400 italic">
               {searchPlaceholder}
             </div>
           </div>
@@ -335,7 +335,7 @@ export function FooterSelect({ label, value }: { label: string; value: string })
   return (
     <span className="flex items-center gap-2 border-r border-gray-300 pr-2 text-xs text-gray-700 last:border-r-0">
       {label}
-      <span className="flex h-7 w-32 items-center justify-between border border-gray-300 bg-white px-2 text-gray-900">
+      <span className="flex h-7 w-32 items-center justify-between rounded-md border border-gray-300 bg-white px-2 text-gray-900">
         <span className="truncate">{value}</span>
         <CaretDownIcon className="h-3.5 w-3.5 text-gray-500" />
       </span>

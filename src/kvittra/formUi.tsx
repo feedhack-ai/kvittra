@@ -20,7 +20,7 @@ import { cn } from "../lib/cn";
 type Icon = ComponentType<{ className?: string }>;
 
 const inputBase =
-  "h-6 w-full min-w-0 border border-gray-300 bg-white px-2 text-xs text-gray-900 outline-none placeholder:text-gray-400 placeholder:italic focus:border-[#1D4ED8] disabled:bg-[#EDEDED] disabled:text-gray-400";
+  "h-6 w-full min-w-0 rounded-md border border-gray-300 bg-white px-2 text-xs text-gray-900 outline-none placeholder:text-gray-400 placeholder:italic focus:border-[#1D4ED8] disabled:bg-[#EDEDED] disabled:text-gray-400";
 
 export function Grid({ children, className }: { children: ReactNode; className?: string }) {
   return <div className={cn("grid grid-cols-4 gap-x-6 gap-y-4", className)}>{children}</div>;
@@ -81,7 +81,7 @@ export function TextInput({
 export function TextArea({ value, onChange }: { value: string; onChange?: (value: string) => void }) {
   return (
     <textarea
-      className="h-[84px] w-full resize-none border border-gray-300 bg-white px-3 py-2 text-xs text-gray-900 outline-none focus:border-[#1D4ED8]"
+      className="h-[84px] w-full resize-none rounded-md border border-gray-300 bg-white px-3 py-2 text-xs text-gray-900 outline-none focus:border-[#1D4ED8]"
       value={value}
       readOnly={!onChange}
       onChange={(e) => onChange?.(e.target.value)}
@@ -133,7 +133,7 @@ export function Segmented<T extends string>({
   disabled?: boolean;
 }) {
   return (
-    <span className="flex h-6 border border-gray-300">
+    <span className="flex h-6 overflow-hidden rounded-md border border-gray-300">
       {options.map((o) => (
         <button
           key={o.value}
@@ -167,7 +167,7 @@ export function NotInLedger({ label, value = "" }: { label: string; value?: stri
   return (
     <Field label={<span className="text-gray-400">{label}</span>}>
       <span
-        className="flex h-6 items-center justify-between border border-gray-300 px-2 text-xs text-gray-400"
+        className="flex h-6 items-center justify-between rounded-md border border-gray-300 px-2 text-xs text-gray-400"
         style={{
           backgroundImage:
             "repeating-linear-gradient(135deg, transparent 0 5px, rgba(0,0,0,0.07) 5px 6px)",
