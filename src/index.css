@@ -11,3 +11,12 @@ body,
   height: 100%;
   margin: 0;
 }
+
+/* Softer, much rounder corners across the theme. */
+@theme {
+  --radius: 0.5rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.5rem;
+}
