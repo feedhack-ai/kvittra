@@ -20,7 +20,7 @@ import { cn } from "../lib/cn";
 type Icon = ComponentType<{ className?: string }>;
 
 const inputBase =
-  "h-6 w-full min-w-0 border border-gray-300 bg-white px-2 text-xs text-gray-900 outline-none placeholder:text-gray-400 placeholder:italic focus:border-[#1D4ED8] disabled:bg-[#EDEDED] disabled:text-gray-400";
+  "h-6 w-full min-w-0 border border-gray-300 bg-white px-2 text-xs text-gray-900 outline-none placeholder:text-gray-400 placeholder:italic focus:border-[#CA8A04] disabled:bg-[#EDEDED] disabled:text-gray-400";
 
 export function Grid({ children, className }: { children: ReactNode; className?: string }) {
   return <div className={cn("grid grid-cols-4 gap-x-6 gap-y-4", className)}>{children}</div>;
@@ -81,7 +81,7 @@ export function TextInput({
 export function TextArea({ value, onChange }: { value: string; onChange?: (value: string) => void }) {
   return (
     <textarea
-      className="h-[84px] w-full resize-none border border-gray-300 bg-white px-3 py-2 text-xs text-gray-900 outline-none focus:border-[#1D4ED8]"
+      className="h-[84px] w-full resize-none border border-gray-300 bg-white px-3 py-2 text-xs text-gray-900 outline-none focus:border-[#CA8A04]"
       value={value}
       readOnly={!onChange}
       onChange={(e) => onChange?.(e.target.value)}
@@ -280,7 +280,7 @@ export function RecordHeader({
           <button
             type="button"
             onClick={onShowList}
-            className="flex h-8 items-center gap-1.5 rounded-full bg-[#F97316] px-4 text-xs font-bold text-black"
+            className="flex h-8 items-center gap-1.5 rounded-full bg-[#FACC15] px-4 text-xs font-bold text-black"
           >
             <HamburgerMenuIcon className="h-4 w-4" />
             Show list
@@ -330,7 +330,7 @@ export function FooterButton({
       disabled={disabled}
       className={cn(
         "flex h-7 items-center gap-1 rounded-full px-5 text-xs font-semibold whitespace-nowrap",
-        tone === "green" && "bg-[#2563EB] text-white",
+        tone === "green" && "bg-[#EAB308] text-black",
         tone === "gray" && "bg-[#8E8E8E] text-white",
         tone === "muted" && "bg-[#D5D5D5] text-white",
         disabled && "cursor-not-allowed opacity-60",

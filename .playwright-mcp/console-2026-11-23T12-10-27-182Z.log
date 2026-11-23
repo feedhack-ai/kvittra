@@ -1,0 +1,16 @@
+[     700ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=a77b3949:22164
+[   35967ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ http://localhost:5173/src/index.css?t=1795435860167:0
+[   35967ms] [ERROR] [vite] Failed to reload /src/index.css. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/@vite/client:808
+[   35967ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ http://localhost:5173/src/kvittra/ArticleForm.tsx?t=1795435860167:0
+[   35967ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ http://localhost:5173/src/kvittra/InvoiceForm.tsx?t=1795435860167:0
+[   35967ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ http://localhost:5173/src/kvittra/pages.tsx?t=1795435860167:0
+[   35967ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ http://localhost:5173/src/kvittra/store.tsx?t=1795435860167:0
+[   35968ms] [ERROR] [vite] Failed to reload /src/kvittra/ArticleForm.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/@vite/client:808
+[   35968ms] [ERROR] [vite] Failed to reload /src/kvittra/InvoiceForm.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/@vite/client:808
+[   35968ms] [ERROR] [vite] Failed to reload /src/kvittra/pages.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/@vite/client:808
+[   35968ms] [ERROR] [vite] Failed to reload /src/kvittra/store.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/@vite/client:808
+[   35969ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/src/kvittra/ArticleForm.tsx?t=1795435863147:0
+[   35969ms] [ERROR] [vite] Failed to reload /src/kvittra/ArticleForm.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/@vite/client:808
+[   35969ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/src/index.css?t=1795435863147:0
+[   35969ms] [ERROR] [vite] Failed to reload /src/index.css. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/@vite/client:808
+[   35969ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:864

@@ -17,7 +17,7 @@ import { cn } from "../lib/cn";
 // lifted from kvittra's own components so the mock reads as the real app;
 // nothing here fetches or persists anything.
 
-export const GREEN = "#1D4ED8";
+export const GREEN = "#CA8A04";
 
 type Icon = ComponentType<{ className?: string }>;
 
@@ -31,8 +31,8 @@ export function PillButton({
   disabled?: boolean;
 }) {
   const tones = {
-    green: disabled ? "bg-[#BFDBFE] text-[#1E3A8A] opacity-80" : "bg-[#2563EB] text-white",
-    yellow: "bg-[#F97316] text-black font-bold",
+    green: disabled ? "bg-[#FEF08A] text-[#713F12] opacity-80" : "bg-[#EAB308] text-black",
+    yellow: "bg-[#FACC15] text-black font-bold",
     slate: disabled ? "bg-[#C8C8C8] text-white" : "bg-[#5E636B] text-white",
     gray: disabled ? "bg-[#C8C8C8] text-white" : "bg-[#8E8E8E] text-white",
   };
@@ -53,7 +53,7 @@ export function CreateButton({ label, onClick }: { label: string; onClick?: () =
     <button
       type="button"
       onClick={onClick}
-      className="flex h-8 items-center gap-1.5 rounded-full bg-[#F97316] px-4 text-xs font-bold text-black"
+      className="flex h-8 items-center gap-1.5 rounded-full bg-[#FACC15] px-4 text-xs font-bold text-black"
     >
       <PlusIcon className="h-4 w-4" />
       {label}
@@ -63,7 +63,7 @@ export function CreateButton({ label, onClick }: { label: string; onClick?: () =
 
 export function GetPaidButton() {
   return (
-    <span className="flex h-8 items-center rounded-full border border-[#1D4ED8] bg-white px-4 text-xs font-bold text-[#1D4ED8]">
+    <span className="flex h-8 items-center rounded-full border border-[#CA8A04] bg-white px-4 text-xs font-bold text-[#CA8A04]">
       Get paid now
     </span>
   );
@@ -79,7 +79,7 @@ function PanelToggle() {
 
 export type Filter = { label: string; swatch?: "yellow" | "red" | "green" | "gray"; badge?: string };
 
-const SWATCH = { yellow: "bg-[#DCD000]", green: "bg-[#BFDBFE]", red: "bg-[#F7C6C6]", gray: "bg-[#D5D5D5]" };
+const SWATCH = { yellow: "bg-[#DCD000]", green: "bg-[#FEF08A]", red: "bg-[#F7C6C6]", gray: "bg-[#D5D5D5]" };
 
 function FilterTabs({ filters, value, onChange }: { filters: Filter[]; value: string; onChange: (v: string) => void }) {
   return (
@@ -100,7 +100,7 @@ function FilterTabs({ filters, value, onChange }: { filters: Filter[]; value: st
           <span className={cn("flex items-center gap-1", f.swatch && "pl-1")}>
             {f.label}
             {f.badge && (
-              <span className="rounded bg-[#DBEAFE] px-1 py-px text-[10px] font-bold text-[#1E3A8A]">{f.badge}</span>
+              <span className="rounded bg-[#FEF9C3] px-1 py-px text-[10px] font-bold text-[#713F12]">{f.badge}</span>
             )}
           </span>
         </button>
@@ -130,7 +130,7 @@ function Pagination({ total }: { total: number }) {
         <span className={cn(arrow, "border-l border-gray-300")}>
           <ChevronLeftIcon className="h-3.5 w-3.5" />
         </span>
-        <span className="flex h-7 w-6 items-center justify-center bg-[#1D4ED8] text-xs font-semibold text-white">
+        <span className="flex h-7 w-6 items-center justify-center bg-[#CA8A04] text-xs font-semibold text-white">
           1
         </span>
         <span className={cn(arrow, "border-r border-gray-300 text-gray-600")}>
@@ -197,7 +197,7 @@ export function ListPage({
   }
 
   const allSelected = rows.length > 0 && selected.size === rows.length;
-  const checkbox = "h-3.5 w-3.5 cursor-pointer accent-[#1D4ED8]";
+  const checkbox = "h-3.5 w-3.5 cursor-pointer accent-[#CA8A04]";
 
   return (
     <div className="flex h-full min-w-0 flex-1 flex-col bg-[#F0F0F0]">
@@ -212,7 +212,7 @@ export function ListPage({
               {searchPlaceholder}
             </div>
           </div>
-          <span className="shrink-0 text-xs whitespace-nowrap text-blue-600">Extended search</span>
+          <span className="shrink-0 text-xs whitespace-nowrap text-[#CA8A04]">Extended search</span>
         </div>
         <div className="flex shrink-0 items-center gap-2">
           {headerButtons}
@@ -281,8 +281,8 @@ export function ListPage({
                   className={cn(
                     "h-10",
                     onRowClick && "cursor-pointer hover:bg-[#F5F5F5]",
-                    row.tint === "green" && "bg-[#EFF6FF]",
-                    selected.has(row.key) && "bg-[#E0E7FF]",
+                    row.tint === "green" && "bg-[#FEFCE8]",
+                    selected.has(row.key) && "bg-[#FEF08A]",
                   )}
                 >
                   <td className="border-r border-b border-gray-200 text-center" onClick={(e) => e.stopPropagation()}>
