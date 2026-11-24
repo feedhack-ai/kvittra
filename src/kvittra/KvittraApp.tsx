@@ -40,6 +40,21 @@ const FOOTER_NAV: NavItem[] = [
 
 const COMPANY = "Söderberg Konsult AB";
 
+function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    <button
+      type="button"
+      onClick={() => setCount((c) => c + 1)}
+      title="Click to count"
+      className="flex items-center gap-1.5 border-r border-gray-300 px-3 text-xs font-medium text-gray-700 hover:bg-black/5"
+    >
+      Count
+      <span className="min-w-6 rounded-full bg-[#7E22CE] px-1.5 py-px text-center font-bold text-white tabular-nums">{count}</span>
+    </button>
+  );
+}
+
 function Header({ navOpen }: { navOpen: boolean }) {
   return (
     <header id="topbar" className="z-20 flex h-10 w-full shrink-0 items-stretch border-b border-gray-300 bg-white">
@@ -55,6 +70,7 @@ function Header({ navOpen }: { navOpen: boolean }) {
       <div className="flex min-w-0 flex-1 items-stretch">
       </div>
       <div className="flex shrink-0 items-stretch border-l border-gray-300">
+        <Counter />
         <div className="flex items-center px-3 text-xs font-medium text-gray-700">{COMPANY}</div>
         <div className="flex w-10 items-center justify-center border-l border-gray-300 bg-white text-gray-600">
           <ChatBubbleIcon className="h-4 w-4" />
