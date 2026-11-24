@@ -166,7 +166,7 @@ function LinesTable({ lines, onChange }: { lines: InvoiceLine[]; onChange: (line
               <button
                 type="button"
                 onClick={() => onChange([...lines, { articleNo: null, name: "", qty: 1, unit: "h", price: 0, discount: 0 }])}
-                className="flex items-center gap-1.5 text-xs font-semibold text-[#1D4ED8]"
+                className="flex items-center gap-1.5 text-xs font-semibold text-[#7E22CE]"
               >
                 <PlusIcon className="h-3.5 w-3.5" />
                 Add row

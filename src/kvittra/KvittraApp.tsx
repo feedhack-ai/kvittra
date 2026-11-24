@@ -73,7 +73,7 @@ function NavRow({ item, open }: { item: NavItem; open: boolean }) {
     <div
       className={cn(
         "flex w-full items-center text-sm transition-colors",
-        active ? "bg-[#1D4ED8]/10 font-medium text-[#1D4ED8]" : "text-gray-600 hover:bg-black/5",
+        active ? "bg-[#7E22CE]/10 font-medium text-[#7E22CE]" : "text-gray-600 hover:bg-black/5",
       )}
     >
       <button
@@ -94,7 +94,7 @@ function NavRow({ item, open }: { item: NavItem; open: boolean }) {
           title={`New ${item.label.toLowerCase().replace(/s$/, "")}`}
           className={cn(
             "mr-1 flex h-6 w-6 items-center justify-center rounded",
-            creating ? "bg-[#1D4ED8]/15 text-[#1D4ED8]" : "text-gray-500 hover:bg-black/10",
+            creating ? "bg-[#7E22CE]/15 text-[#7E22CE]" : "text-gray-500 hover:bg-black/10",
           )}
         >
           <PlusIcon className="h-3.5 w-3.5" />
