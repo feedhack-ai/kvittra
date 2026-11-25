@@ -32,7 +32,7 @@ export function PillButton({
 }) {
   const tones = {
     green: disabled ? "bg-[#BFDBFE] text-[#1E3A8A] opacity-80" : "bg-[#2563EB] text-white",
-    yellow: "bg-[#F97316] text-black font-bold",
+    yellow: "bg-[#2563EB] text-white font-bold",
     slate: disabled ? "bg-[#C8C8C8] text-white" : "bg-[#5E636B] text-white",
     gray: disabled ? "bg-[#C8C8C8] text-white" : "bg-[#8E8E8E] text-white",
   };
@@ -53,7 +53,7 @@ export function CreateButton({ label, onClick }: { label: string; onClick?: () =
     <button
       type="button"
       onClick={onClick}
-      className="flex h-8 items-center gap-1.5 rounded-full bg-[#F97316] px-4 text-xs font-bold text-black"
+      className="flex h-8 items-center gap-1.5 rounded-full bg-[#2563EB] px-4 text-xs font-bold text-white"
     >
       <PlusIcon className="h-4 w-4" />
       {label}
