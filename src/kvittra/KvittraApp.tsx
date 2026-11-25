@@ -42,21 +42,21 @@ const COMPANY = "Söderberg Konsult AB";
 
 function Header({ navOpen }: { navOpen: boolean }) {
   return (
-    <header id="topbar" className="z-20 flex h-10 w-full shrink-0 items-stretch border-b border-gray-300 bg-white">
+    <header id="topbar" className="z-20 flex h-10 w-full shrink-0 items-stretch border-b border-[#1E3A8A] bg-[#1E3A8A] text-white">
       <div
         className={cn(
-          "flex shrink-0 items-center overflow-hidden border-r border-gray-300 transition-[width] duration-200",
+          "flex shrink-0 items-center overflow-hidden border-r border-white/20 transition-[width] duration-200",
           navOpen ? "w-44 justify-start gap-2 pl-2.5" : "w-10 justify-center",
         )}
       >
-        <img src={`${import.meta.env.BASE_URL}icon.svg`} alt="Kvittra" width={20} height={20} className="h-5 w-5" />
-        {navOpen && <img src={`${import.meta.env.BASE_URL}wordmark.svg`} alt="kvittra" width={120} height={32} className="h-5 w-auto" />}
+        <img src={`${import.meta.env.BASE_URL}icon.svg`} alt="Kvittra" width={20} height={20} className="h-5 w-5 rounded-[5px] ring-1 ring-white/60" />
+        {navOpen && <img src={`${import.meta.env.BASE_URL}wordmark.svg`} alt="kvittra" width={120} height={32} className="h-5 w-auto brightness-0 invert" />}
       </div>
       <div className="flex min-w-0 flex-1 items-stretch">
       </div>
-      <div className="flex shrink-0 items-stretch border-l border-gray-300">
-        <div className="flex items-center px-3 text-xs font-medium text-gray-700">{COMPANY}</div>
-        <div className="flex w-10 items-center justify-center border-l border-gray-300 bg-white text-gray-600">
+      <div className="flex shrink-0 items-stretch border-l border-white/20">
+        <div className="flex items-center px-3 text-xs font-medium text-white">{COMPANY}</div>
+        <div className="flex w-10 items-center justify-center border-l border-white/20 text-white/80">
           <ChatBubbleIcon className="h-4 w-4" />
         </div>
       </div>
@@ -73,7 +73,7 @@ function NavRow({ item, open }: { item: NavItem; open: boolean }) {
     <div
       className={cn(
         "flex w-full items-center text-sm transition-colors",
-        active ? "bg-[#1D4ED8]/10 font-medium text-[#1D4ED8]" : "text-gray-600 hover:bg-black/5",
+        active ? "bg-[#1D4ED8]/15 font-medium text-[#1D4ED8]" : "text-gray-600 hover:bg-[#1D4ED8]/5",
       )}
     >
       <button
@@ -109,7 +109,7 @@ function LeftNav({ open, onToggle }: { open: boolean; onToggle: () => void }) {
     <aside
       id="sidebar"
       className={cn(
-        "flex shrink-0 flex-col border-r border-gray-300 bg-[#FAFAFA] transition-[width] duration-200 select-none",
+        "flex shrink-0 flex-col border-r border-[#BFDBFE] bg-[#EFF6FF] transition-[width] duration-200 select-none",
         open ? "w-44" : "w-10",
       )}
     >
@@ -133,7 +133,7 @@ function LeftNav({ open, onToggle }: { open: boolean; onToggle: () => void }) {
           <NavRow key={item.id} item={item} open={open} />
         ))}
       </nav>
-      <div className="mt-auto flex flex-col border-t border-gray-300">
+      <div className="mt-auto flex flex-col border-t border-[#BFDBFE]">
         {FOOTER_NAV.map((item) => (
           <NavRow key={item.id} item={item} open={open} />
         ))}

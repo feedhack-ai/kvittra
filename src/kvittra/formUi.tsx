@@ -280,7 +280,7 @@ export function RecordHeader({
           <button
             type="button"
             onClick={onShowList}
-            className="flex h-8 items-center gap-1.5 rounded-full bg-[#F97316] px-4 text-xs font-bold text-black"
+            className="flex h-8 items-center gap-1.5 rounded-full bg-[#2563EB] px-4 text-xs font-bold text-white"
           >
             <HamburgerMenuIcon className="h-4 w-4" />
             Show list
