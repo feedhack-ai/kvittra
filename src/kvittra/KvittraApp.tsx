@@ -41,6 +41,7 @@ const FOOTER_NAV: NavItem[] = [
 const COMPANY = "Söderberg Konsult AB";
 
 function Header({ navOpen }: { navOpen: boolean }) {
+  const [greeted, setGreeted] = useState(false);
   return (
     <header id="topbar" className="z-20 flex h-10 w-full shrink-0 items-stretch border-b border-gray-300 bg-white">
       <div
@@ -52,7 +53,16 @@ function Header({ navOpen }: { navOpen: boolean }) {
         <img src={`${import.meta.env.BASE_URL}icon.svg`} alt="Kvittra" width={20} height={20} className="h-5 w-5" />
         {navOpen && <img src={`${import.meta.env.BASE_URL}wordmark.svg`} alt="kvittra" width={120} height={32} className="h-5 w-auto" />}
       </div>
-      <div className="flex min-w-0 flex-1 items-stretch">
+      <div className="flex min-w-0 flex-1 items-center gap-2 px-3">
+        <button
+          id="hej-button"
+          type="button"
+          onClick={() => setGreeted((g) => !g)}
+          className="flex h-6 items-center rounded border border-gray-300 bg-white px-2.5 text-[11px] font-semibold text-gray-700 hover:border-gray-500"
+        >
+          Hej
+        </button>
+        {greeted && <span className="text-xs text-gray-600">Hej! 👋</span>}
       </div>
       <div className="flex shrink-0 items-stretch border-l border-gray-300">
         <div className="flex items-center px-3 text-xs font-medium text-gray-700">{COMPANY}</div>
